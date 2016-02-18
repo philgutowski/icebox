@@ -4,7 +4,7 @@ var board = new five.Board({
     io: new raspi()
 });
 
-five.Board().on("ready", function() {
+board.on("ready", function() {
     console.log('ready');
     var temperature = new five.Thermometer({
         controller: "TMP36",
