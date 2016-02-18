@@ -6,6 +6,7 @@ var board = new five.Board({
 
 board.on("ready", function() {
     console.log('ready');
+    this.pinMode('GPIO21', this.MODES.INPUT);
     var temperature = new five.Thermometer({
         controller: "TMP36",
         pin: "GPIO21"
